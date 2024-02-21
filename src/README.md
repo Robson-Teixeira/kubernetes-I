@@ -20,3 +20,9 @@
 
 ### Google Cloud Plataform
 - Novo Projeto -> Kubernetes Engine -> Criar cluster
+
+## Conceitos e resumos
+- Pod é o conjunto de 1 ou mais containers
+- Containers em um POD compartilham o mesmo IP, mas devem possuir portas diferentes
+- Containers em um POD podem compartilhar volumes
+- POD's são efêmeros, ou seja, ao criar um POD efetivamente trata-se um novo POD e não o POD anterior "renascido"
