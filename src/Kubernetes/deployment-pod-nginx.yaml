@@ -1,0 +1,8 @@
+apiVersion: v1 # Versão da API: https://kubernetes.io/docs/concepts/overview/kubernetes-api/
+kind: Pod # Tipo de recurso a ser criado
+metadata: # Detalhes do POD
+  name: pod-nginx-declarativo # Nome do POD
+spec: # Especificação do POD
+  containers: # Lista de containers separados por -
+    - name: nginx-container # Nome do container
+      image: nginx:latest # Imagem do container
