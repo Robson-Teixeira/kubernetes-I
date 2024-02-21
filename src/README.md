@@ -26,3 +26,10 @@
 - Containers em um POD compartilham o mesmo IP, mas devem possuir portas diferentes
 - Containers em um POD podem compartilhar volumes
 - POD's são efêmeros, ou seja, ao criar um POD efetivamente trata-se um novo POD e não o POD anterior "renascido"
+
+## Comandos
+- `kubectl run <nome-pod> --image=<nome-imagem>:<versão>` cria um pod com a imagem especificada
+- `kubectl get pods` lista POD's
+    - `kubectl get pods --watch` inicia monitoramento dos POD's
+- `kubectl describe pod <nome-pod>` detalhes do POD
+- `kubectl edit pod <nome-pod>` edita o POD
