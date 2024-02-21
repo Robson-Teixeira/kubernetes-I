@@ -34,3 +34,6 @@
 - `kubectl describe pod <nome-pod>` detalhes do POD
 - `kubectl edit pod <nome-pod>` edita o POD
 - `kubectl apply -f <nome-arquivo>.yaml/.json` aplica arquivo para criar POD de maneira declarativa
+- `kubectl delete pod <nome-pod>` deleta POD especificado
+    - `kubectl delete -f <nome-arquivo>.yaml/.json` deleta POD definido pelo arquivo
+- `kubectl exec -it <nome-pod> -- <comando>` executa de maneira interativa o comando especificado (Ex.: _bash_). Para sair: `Ctrl + D`
