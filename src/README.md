@@ -28,12 +28,15 @@
 - POD's são efêmeros, ou seja, ao criar um POD efetivamente trata-se um novo POD e não o POD anterior "renascido"
 - _Services_ (svc) (_ClusterIP_, _NodePort_, _LoadBalancer_) são abstrações para expor aplicações executando em um ou mais POD's, proveem IP's fixos, DNS e fazem balanceamento de carga
     - _ClusterIP_ faz a comunicação entre diferentes POD's dentro de um mesmo _cluster_ (unilateral, ou seja, apenas o POD com o _service_ implementado pode ser acessado de maneira estável, mas não fora do _cluster_)
+    - _NodePort_ libera comunicação com o mundo externo. Também funciona como _ClusterIP_
+
+        >Para acesso externo no Windows utilizar `localhost:<nodePort>`. No Linux (minikube) utilizar o `internal-ip` do node.
 
 ## Comandos
 - `kubectl run <nome-pod> --image=<nome-imagem>:<versão>` cria um POD com a imagem especificada de maneira imperativa
 - `kubectl get pods` lista POD's
     - `kubectl get pods --watch` inicia monitoramento dos POD's
-    - `kubectl get pods -o wide` formata o output de maneira wide
+    - `kubectl get pods -o wide` | `kubectl get nodes -o wide` formata o output de maneira wide
 - `kubectl describe pod <nome-pod>` detalhes do POD
 - `kubectl edit pod <nome-pod>` edita o POD
 - `kubectl apply -f <nome-arquivo>.yaml/.json` aplica arquivo para criar POD de maneira declarativa
