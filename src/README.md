@@ -44,5 +44,6 @@
 - `kubectl apply -f <nome-arquivo>.yaml/.json` aplica arquivo para criar POD de maneira declarativa
 - `kubectl delete pod <nome-pod>` deleta POD especificado
     - `kubectl delete -f <nome-arquivo>.yaml/.json` deleta POD definido pelo arquivo
+    - `kubectl delete pods --all` | `kubectl delete svc --all` deleta todos os itens especificados
 - `kubectl exec -it <nome-pod> -- <comando>` executa de maneira interativa o comando especificado (Ex.: _bash_). Para sair: `Ctrl + D`
 - `kubectl get services` ou `kubectl get svc` lista serviços
