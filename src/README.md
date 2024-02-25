@@ -32,6 +32,8 @@
 
         >Para acesso externo no Windows utilizar `localhost:<nodePort>`. No Linux (minikube) utilizar o `internal-ip` do node.
 
+    - _LoadBalancer_ libera comunicação com o mundo externo automaticamente integrado ao _LoadBalancer_ do provedor (AWS, Azure, Google Cloud Plataform e etc)
+
 ## Comandos
 - `kubectl run <nome-pod> --image=<nome-imagem>:<versão>` cria um POD com a imagem especificada de maneira imperativa
 - `kubectl get pods` lista POD's
