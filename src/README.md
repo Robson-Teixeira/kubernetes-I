@@ -26,6 +26,7 @@
 - Containers em um POD compartilham o mesmo IP, mas devem possuir portas diferentes
 - Containers em um POD podem compartilhar volumes
 - POD's são efêmeros, ou seja, ao criar um POD efetivamente trata-se um novo POD e não o POD anterior "renascido"
+- _Labels_ são pares de `chave x valor` utilizadas para vincular `Service x POD`
 - _Services_ (svc) (_ClusterIP_, _NodePort_, _LoadBalancer_) são abstrações para expor aplicações executando em um ou mais POD's, proveem IP's fixos, DNS e fazem balanceamento de carga
     - _ClusterIP_ faz a comunicação entre diferentes POD's dentro de um mesmo _cluster_ (unilateral, ou seja, apenas o POD com o _service_ implementado pode ser acessado de maneira estável, mas não fora do _cluster_)
     - _NodePort_ libera comunicação com o mundo externo. Também funciona como _ClusterIP_
