@@ -40,11 +40,13 @@
 - `kubectl get pods` lista POD's
     - `kubectl get pods --watch` inicia monitoramento dos POD's
     - `kubectl get pods -o wide` | `kubectl get nodes -o wide` formata o output de maneira wide
+- `kubectl get services` ou `kubectl get svc` lista serviços
+- `kubectl get configmap` lista ConfigMap's    
 - `kubectl describe pod <nome-pod>` detalhes do POD
+- `kubectl describe configmap <nome-cm>` detalhes do ConfigMap
 - `kubectl edit pod <nome-pod>` edita o POD
 - `kubectl apply -f <nome-arquivo>.yaml/.json` aplica arquivo para criar POD de maneira declarativa
 - `kubectl delete pod <nome-pod>` deleta POD especificado
     - `kubectl delete -f <nome-arquivo>.yaml/.json` deleta POD definido pelo arquivo
     - `kubectl delete pods --all` | `kubectl delete svc --all` deleta todos os itens especificados
 - `kubectl exec -it <nome-pod> -- <comando>` executa de maneira interativa o comando especificado (Ex.: _bash_). Para sair: `Ctrl + D`
-- `kubectl get services` ou `kubectl get svc` lista serviços
